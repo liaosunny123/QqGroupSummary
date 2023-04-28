@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AssemblyName>EpicMo.Plugins.QqGroupSummary</AssemblyName>
+        <RootNamespace>EpicMo.Plugins.QqGroupSummary</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Reference Include="Sorux.Bot.Core.Interface">
+            <HintPath>..\Interface\Sorux.Bot.Core.Interface.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="RestSharp" Version="110.2.0"/>
+    </ItemGroup>
+
+</Project>

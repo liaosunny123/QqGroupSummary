@@ -28,6 +28,49 @@ QqGroupSummary基于SoruxBot Beta v1.0.3，由于SoruxBot破坏性更新，不�
 //得到最近一段时间内群消息的总结内容
 ```
 
+```
+//添加Token
+#summarytokenset [token]
+//添加GptToken
+```
+
 # 可扩展性
 
 在插件目录`summary`下的配置文件中可以找到插件的配置文件，编辑配置文件，使`remoteServer`选项为`enable`后，可以配置上报服务器。
+
+配置模板：
+
+请注意，由于SoruxBot手动Hash了配置文件，你可能需要在`Data\b79606fb3afea5bd1609ed40b622142f1c98125abcfe89a76a661b0e8e343910.json`中修改配置
+
+```json
+{
+    "enableServer":"true",
+    "endPoint":"https://localhost:8080"
+}
+```
+
+上报：
+
+```json
+POST /summary/TopicLister
+{
+	"Topic":"话题",
+    "Group":"触发的群",
+    "User":"触发的用户",
+    "RawText":"消息原文",
+    "Summary":"总结的内容"
+}
+```
+
+```json
+POST /summary/Summary
+{
+    "Group":"触发的群",
+    "RawText":"消息原文",
+    "Summary":"总结的内容"
+}
+```
+
+# 权限节点
+
+在插件中，对于话题的添加和设置GptToken需要权限节点`EpicMo.Plugins.QqGroupSummary.SetTopic`和`EpicMo.Plugins.QqGroupSummary.SetToken`

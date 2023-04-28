@@ -1,0 +1,22 @@
+{
+    "Name": "QqGroupSummary",
+    "Privilege": 1,
+    "PermissionNode": 
+    [
+        {
+            "Node": "EpicMo.Plugins.QqGroupSummary.SetTopic",
+            "Description": "在群聊对话中具有设置触发的话题的权限",
+            "ConditionType": "BasicModel",
+            "ConditionChar": "TriggerId"
+        },
+        {
+            "Node": "EpicMo.Plugins.QqGroupSummary.SetToken",
+            "Description": "在群聊对话中具有设置GptToken的权限",
+            "ConditionType": "BasicModel",
+            "ConditionChar": "TriggerId"
+        }
+    ],
+    "PermissionDefaultConfig":
+    [
+    ]
+}

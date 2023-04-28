@@ -1,0 +1,2 @@
+# QqGroupSummary
+基于SoruxBot的QQ群信息整理，可以提供消息概括，话题检测后私发等省流功能的机器人插件
